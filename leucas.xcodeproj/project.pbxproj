@@ -25,6 +25,7 @@
 /* Begin PBXFileReference section */
 		2FA8D4652B33B370000EE389 /* leucas */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = leucas; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FA8D4682B33B370000EE389 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		2FA8D46F2B33B3AB000EE389 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +42,7 @@
 		2FA8D45C2B33B370000EE389 = {
 			isa = PBXGroup;
 			children = (
+				2FA8D46F2B33B3AB000EE389 /* README.md */,
 				2FA8D4672B33B370000EE389 /* leucas */,
 				2FA8D4662B33B370000EE389 /* Products */,
 			);
