@@ -8,17 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		2FA8D4692B33B370000EE389 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA8D4682B33B370000EE389 /* main.swift */; };
+		2FA8D4752B33BADE000EE389 /* leucas in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FA8D4652B33B370000EE389 /* leucas */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2FA8D4772B33BD69000EE389 /* ReadScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA8D4762B33BD69000EE389 /* ReadScript.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2FA8D4632B33B370000EE389 /* CopyFiles */ = {
+		2FA8D4732B33B9C5000EE389 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			dstPath = ../../../../../bin;
+			dstSubfolderSpec = 16;
 			files = (
+				2FA8D4752B33BADE000EE389 /* leucas in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -26,6 +29,9 @@
 		2FA8D4652B33B370000EE389 /* leucas */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = leucas; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FA8D4682B33B370000EE389 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		2FA8D46F2B33B3AB000EE389 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2FA8D4702B33B577000EE389 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		2FA8D4712B33B59D000EE389 /* script.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = script.json; sourceTree = "<group>"; };
+		2FA8D4762B33BD69000EE389 /* ReadScript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadScript.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +48,8 @@
 		2FA8D45C2B33B370000EE389 = {
 			isa = PBXGroup;
 			children = (
+				2FA8D4712B33B59D000EE389 /* script.json */,
+				2FA8D4702B33B577000EE389 /* .gitignore */,
 				2FA8D46F2B33B3AB000EE389 /* README.md */,
 				2FA8D4672B33B370000EE389 /* leucas */,
 				2FA8D4662B33B370000EE389 /* Products */,
@@ -60,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				2FA8D4682B33B370000EE389 /* main.swift */,
+				2FA8D4762B33BD69000EE389 /* ReadScript.swift */,
 			);
 			path = leucas;
 			sourceTree = "<group>";
@@ -73,7 +82,7 @@
 			buildPhases = (
 				2FA8D4612B33B370000EE389 /* Sources */,
 				2FA8D4622B33B370000EE389 /* Frameworks */,
-				2FA8D4632B33B370000EE389 /* CopyFiles */,
+				2FA8D4732B33B9C5000EE389 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -122,6 +131,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FA8D4772B33BD69000EE389 /* ReadScript.swift in Sources */,
 				2FA8D4692B33B370000EE389 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
