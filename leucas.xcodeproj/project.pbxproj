@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2FA8D4692B33B370000EE389 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA8D4682B33B370000EE389 /* main.swift */; };
+		2FA8D4692B33B370000EE389 /* leucas_main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA8D4682B33B370000EE389 /* leucas_main.swift */; };
 		2FA8D4752B33BADE000EE389 /* leucas in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FA8D4652B33B370000EE389 /* leucas */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2FA8D4772B33BD69000EE389 /* ReadScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA8D4762B33BD69000EE389 /* ReadScript.swift */; };
+		2FA8D47A2B33BEE1000EE389 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 2FA8D4792B33BEE1000EE389 /* ArgumentParser */; };
+		2FA8D4802B33C8FE000EE389 /* SendMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA8D47F2B33C8FE000EE389 /* SendMessage.swift */; };
+		2FA8D4822B33C943000EE389 /* Script.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA8D4812B33C943000EE389 /* Script.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,11 +30,13 @@
 
 /* Begin PBXFileReference section */
 		2FA8D4652B33B370000EE389 /* leucas */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = leucas; sourceTree = BUILT_PRODUCTS_DIR; };
-		2FA8D4682B33B370000EE389 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		2FA8D4682B33B370000EE389 /* leucas_main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leucas_main.swift; sourceTree = "<group>"; };
 		2FA8D46F2B33B3AB000EE389 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2FA8D4702B33B577000EE389 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		2FA8D4712B33B59D000EE389 /* script.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = script.json; sourceTree = "<group>"; };
 		2FA8D4762B33BD69000EE389 /* ReadScript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadScript.swift; sourceTree = "<group>"; };
+		2FA8D47F2B33C8FE000EE389 /* SendMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessage.swift; sourceTree = "<group>"; };
+		2FA8D4812B33C943000EE389 /* Script.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Script.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FA8D47A2B33BEE1000EE389 /* ArgumentParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,8 +73,10 @@
 		2FA8D4672B33B370000EE389 /* leucas */ = {
 			isa = PBXGroup;
 			children = (
-				2FA8D4682B33B370000EE389 /* main.swift */,
+				2FA8D4682B33B370000EE389 /* leucas_main.swift */,
 				2FA8D4762B33BD69000EE389 /* ReadScript.swift */,
+				2FA8D47F2B33C8FE000EE389 /* SendMessage.swift */,
+				2FA8D4812B33C943000EE389 /* Script.swift */,
 			);
 			path = leucas;
 			sourceTree = "<group>";
@@ -89,6 +97,9 @@
 			dependencies = (
 			);
 			name = leucas;
+			packageProductDependencies = (
+				2FA8D4792B33BEE1000EE389 /* ArgumentParser */,
+			);
 			productName = leucas;
 			productReference = 2FA8D4652B33B370000EE389 /* leucas */;
 			productType = "com.apple.product-type.tool";
@@ -117,6 +128,9 @@
 				Base,
 			);
 			mainGroup = 2FA8D45C2B33B370000EE389;
+			packageReferences = (
+				2FA8D4782B33BEE1000EE389 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+			);
 			productRefGroup = 2FA8D4662B33B370000EE389 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -131,8 +145,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FA8D4822B33C943000EE389 /* Script.swift in Sources */,
 				2FA8D4772B33BD69000EE389 /* ReadScript.swift in Sources */,
-				2FA8D4692B33B370000EE389 /* main.swift in Sources */,
+				2FA8D4802B33C8FE000EE389 /* SendMessage.swift in Sources */,
+				2FA8D4692B33B370000EE389 /* leucas_main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +317,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2FA8D4782B33BEE1000EE389 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2FA8D4792B33BEE1000EE389 /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FA8D4782B33BEE1000EE389 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2FA8D45D2B33B370000EE389 /* Project object */;
 }
