@@ -31,7 +31,7 @@
 
 /* Begin PBXFileReference section */
 		2F41B9832B33DE2B005EC790 /* VersionText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionText.swift; sourceTree = "<group>"; };
-		2F41B9862B33E6CF005EC790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F41B9872B33EF6B005EC790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FA8D4652B33B370000EE389 /* leucas */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = leucas; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FA8D4682B33B370000EE389 /* leucas_main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leucas_main.swift; sourceTree = "<group>"; };
 		2FA8D46F2B33B3AB000EE389 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 		2FA8D45C2B33B370000EE389 = {
 			isa = PBXGroup;
 			children = (
-				2F41B9862B33E6CF005EC790 /* Info.plist */,
+				2F41B9872B33EF6B005EC790 /* Info.plist */,
 				2FA8D4712B33B59D000EE389 /* script.json */,
 				2FA8D4702B33B577000EE389 /* .gitignore */,
 				2FA8D46F2B33B3AB000EE389 /* README.md */,
@@ -93,6 +93,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2FA8D46C2B33B370000EE389 /* Build configuration list for PBXNativeTarget "leucas" */;
 			buildPhases = (
+				2F41B9882B33F0FE005EC790 /* Increment Build Number */,
 				2FA8D4612B33B370000EE389 /* Sources */,
 				2FA8D4622B33B370000EE389 /* Frameworks */,
 				2FA8D4732B33B9C5000EE389 /* CopyFiles */,
@@ -144,6 +145,27 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F41B9882B33F0FE005EC790 /* Increment Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Increment Build Number";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nbuildNumberHex=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbuildNumber=$((16#$buildNumberHex))\nbuildNumber=$(($buildNumber + 1))\nbuildNumberHex=$(printf '%x\\n' $buildNumber)\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumberHex\" \"$INFOPLIST_FILE\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2FA8D4612B33B370000EE389 /* Sources */ = {
@@ -199,7 +221,6 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -214,10 +235,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = leucas/Info.plist;
+				INFOPLIST_FILE = "${SRCROOT}/Info.plist";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -267,7 +288,6 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -276,10 +296,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = leucas/Info.plist;
+				INFOPLIST_FILE = "${SRCROOT}/Info.plist";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -293,11 +313,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = "not-set";
 				DEVELOPMENT_TEAM = HT9ZXTP3Z4;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
-				MARKETING_VERSION = "not-set";
 				PRODUCT_BUNDLE_IDENTIFIER = jtpotato.leucas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -308,11 +325,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = "not-set";
 				DEVELOPMENT_TEAM = HT9ZXTP3Z4;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
-				MARKETING_VERSION = "not-set";
 				PRODUCT_BUNDLE_IDENTIFIER = jtpotato.leucas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
