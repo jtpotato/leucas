@@ -10,7 +10,7 @@ import Foundation
 struct DiscordMessage: Encodable {
     var content: String
     var username: String
-    var avatarURL: String?
+    var avatar_url: String?
 }
 
 func sendMessage(apiURL: String, content: String, username: String, avatarURL: String? = nil) async {
@@ -22,7 +22,7 @@ func sendMessage(apiURL: String, content: String, username: String, avatarURL: S
     var message = DiscordMessage(content: content, username: username)
     
     if (avatarURL != nil) {
-        message.avatarURL = avatarURL
+        message.avatar_url = avatarURL
     }
     
     let encoder = JSONEncoder()
@@ -43,7 +43,9 @@ func sendMessage(apiURL: String, content: String, username: String, avatarURL: S
     do {
         let (_, response) = try await URLSession.shared.upload(for: request, from: data)
         
-        print(response)
+        let httpResponse = response as? HTTPURLResponse
+        
+        print(httpResponse?.statusCode ?? "help-something-went-wrong-in-leucas")
     }
     catch {
         print(error)

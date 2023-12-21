@@ -27,11 +27,12 @@ struct leucas: AsyncParsableCommand {
         // Continue on.
         let script = readScript(path: file!)
         
-        print("hello world")
-        print(script)
-        
         for message in script.messages {
-            await sendMessage(apiURL: script.characters[message.sender].api, content: message.content, username: script.characters[message.sender].name);
+            var profile = script.characters[message.sender].profile
+            
+//            print("apiURL: \(script.characters[message.sender].api), content: \(message.content), username: \(script.characters[message.sender].name), avatarURL: \(profile ?? "")")
+            
+             await sendMessage(apiURL: script.characters[message.sender].api, content: message.content, username: script.characters[message.sender].name, avatarURL: profile);
             try await Task.sleep(nanoseconds: UInt64(1e9))
         }
     }
