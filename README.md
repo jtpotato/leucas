@@ -11,6 +11,15 @@ A CLI that uses Discord's webhooks to post as a bot account. You could probably 
 
 Built in Swift. Because I need to learn how to code without GitHub Copilot.
 
+# Installation
+**macOS ONLY** (i think. linux users feel free to try out but i'm sorry if it doesn't work)
+
+Download the binary from the Releases tab, and put it into a folder that's on your $PATH.
+
+`/usr/local/bin` is pretty popular.
+
+Verify it's installed by running `leucas --version`
+
 # Usage
 1. Make a JSON file. Example:
    <img width="1097" alt="image" src="https://github.com/jtpotato/leucas/assets/58995538/b0e34ca7-d60c-4fc5-bfe8-4d3182d22faf">
