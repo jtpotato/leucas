@@ -10,11 +10,22 @@ import ArgumentParser
 
 @main
 struct leucas: AsyncParsableCommand {
-    @Argument(help: "The location of the script file to read from.")
-    var scriptFilePath: String
+    @Option(name: .shortAndLong, help: "The location of the script file to read from.")
+    var file: String? = nil
+    
+    @Flag(name: .shortAndLong, help: "Displays information about this installation of leucas.")
+    var version = false
     
     mutating func run() async throws {
-        let script = readScript(path: scriptFilePath)
+        if (version) {
+            printVersionText()
+            return
+        }
+        
+        if (file == nil) { return }
+        
+        // Continue on.
+        let script = readScript(path: file!)
         
         print("hello world")
         print(script)

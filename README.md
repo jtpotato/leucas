@@ -27,7 +27,7 @@ Built in Swift. Because I need to learn how to code without GitHub Copilot.
    {
      "api": string, // Discord webhook link
      "name": string,
-     "profile": string? // optional
+     "profile": string? // optional, url to profile picture
    }
    ```
    Messages

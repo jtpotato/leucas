@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F41B9842B33DE2B005EC790 /* VersionText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F41B9832B33DE2B005EC790 /* VersionText.swift */; };
 		2FA8D4692B33B370000EE389 /* leucas_main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA8D4682B33B370000EE389 /* leucas_main.swift */; };
 		2FA8D4752B33BADE000EE389 /* leucas in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FA8D4652B33B370000EE389 /* leucas */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2FA8D4772B33BD69000EE389 /* ReadScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA8D4762B33BD69000EE389 /* ReadScript.swift */; };
@@ -29,6 +30,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2F41B9832B33DE2B005EC790 /* VersionText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionText.swift; sourceTree = "<group>"; };
+		2F41B9862B33E6CF005EC790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FA8D4652B33B370000EE389 /* leucas */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = leucas; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FA8D4682B33B370000EE389 /* leucas_main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leucas_main.swift; sourceTree = "<group>"; };
 		2FA8D46F2B33B3AB000EE389 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -54,6 +57,7 @@
 		2FA8D45C2B33B370000EE389 = {
 			isa = PBXGroup;
 			children = (
+				2F41B9862B33E6CF005EC790 /* Info.plist */,
 				2FA8D4712B33B59D000EE389 /* script.json */,
 				2FA8D4702B33B577000EE389 /* .gitignore */,
 				2FA8D46F2B33B3AB000EE389 /* README.md */,
@@ -77,6 +81,7 @@
 				2FA8D4762B33BD69000EE389 /* ReadScript.swift */,
 				2FA8D47F2B33C8FE000EE389 /* SendMessage.swift */,
 				2FA8D4812B33C943000EE389 /* Script.swift */,
+				2F41B9832B33DE2B005EC790 /* VersionText.swift */,
 			);
 			path = leucas;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FA8D4822B33C943000EE389 /* Script.swift in Sources */,
+				2F41B9842B33DE2B005EC790 /* VersionText.swift in Sources */,
 				2FA8D4772B33BD69000EE389 /* ReadScript.swift in Sources */,
 				2FA8D4802B33C8FE000EE389 /* SendMessage.swift in Sources */,
 				2FA8D4692B33B370000EE389 /* leucas_main.swift in Sources */,
@@ -189,6 +195,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -207,6 +214,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = leucas/Info.plist;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -215,6 +224,8 @@
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "";
 			};
 			name = Debug;
 		};
@@ -252,6 +263,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -264,12 +276,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = leucas/Info.plist;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "";
 			};
 			name = Release;
 		};
@@ -277,8 +293,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = "not-set";
 				DEVELOPMENT_TEAM = HT9ZXTP3Z4;
 				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				MARKETING_VERSION = "not-set";
+				PRODUCT_BUNDLE_IDENTIFIER = jtpotato.leucas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -288,8 +308,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = "not-set";
 				DEVELOPMENT_TEAM = HT9ZXTP3Z4;
 				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				MARKETING_VERSION = "not-set";
+				PRODUCT_BUNDLE_IDENTIFIER = jtpotato.leucas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
