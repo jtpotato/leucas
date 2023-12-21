@@ -46,6 +46,6 @@ Verify it's installed by running `leucas --version`
      "message": string
    }
    ```
-2. `leucas path/to/script.json`
+2. `leucas --file path/to/script.json`
 
    Messages are sent every second.
