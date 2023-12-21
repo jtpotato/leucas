@@ -24,6 +24,8 @@ Download the binary from the Releases tab, and put it into a folder that's on yo
 
 Verify it's installed by running `leucas --version`
 
+If you wish, generate completions with `leucas --generate-completion-script`, and follow your shell's installation procedures for completions.
+
 # Usage
 1. Make a JSON file. Example:
    <img width="1097" alt="image" src="https://github.com/jtpotato/leucas/assets/58995538/b0e34ca7-d60c-4fc5-bfe8-4d3182d22faf">
