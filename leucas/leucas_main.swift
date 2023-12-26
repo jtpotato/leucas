@@ -16,9 +16,17 @@ struct leucas: AsyncParsableCommand {
     @Flag(name: .shortAndLong, help: "Displays information about this installation of leucas.")
     var version = false
     
+    @Flag(name: .shortAndLong, help: "INTERNAL: Runs Tests.")
+    var test = false
+    
     mutating func run() async throws {
         if (version) {
             printVersionText()
+            return
+        }
+        
+        if (test) {
+            runTests()
             return
         }
         
@@ -27,12 +35,15 @@ struct leucas: AsyncParsableCommand {
         // Continue on.
         let script = readScript(path: file!)
         
+        // Slate
+        await sendMessage(apiURL: script.characters[0].api, content: "---", username: "leucas-slate")
+        
+        try await Task.sleep(nanoseconds: UInt64(1e9))
+        
         for message in script.messages {
-            var profile = script.characters[message.sender].profile
+            let profile = script.characters[message.sender].profile
             
-//            print("apiURL: \(script.characters[message.sender].api), content: \(message.content), username: \(script.characters[message.sender].name), avatarURL: \(profile ?? "")")
-            
-             await sendMessage(apiURL: script.characters[message.sender].api, content: message.content, username: script.characters[message.sender].name, avatarURL: profile);
+            await sendMessage(apiURL: script.characters[message.sender].api, content: message.content, username: script.characters[message.sender].name, avatarURL: profile);
             try await Task.sleep(nanoseconds: UInt64(1e9))
         }
     }

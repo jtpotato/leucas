@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2F41B9842B33DE2B005EC790 /* VersionText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F41B9832B33DE2B005EC790 /* VersionText.swift */; };
+		2F4D358B2B3A5E5900729B9C /* MakeSlate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4D358A2B3A5E5900729B9C /* MakeSlate.swift */; };
+		2F4D358E2B3A5FF500729B9C /* RunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4D358D2B3A5FF500729B9C /* RunTests.swift */; };
 		2FA8D4692B33B370000EE389 /* leucas_main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA8D4682B33B370000EE389 /* leucas_main.swift */; };
 		2FA8D4752B33BADE000EE389 /* leucas in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FA8D4652B33B370000EE389 /* leucas */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2FA8D4772B33BD69000EE389 /* ReadScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA8D4762B33BD69000EE389 /* ReadScript.swift */; };
@@ -32,6 +34,8 @@
 /* Begin PBXFileReference section */
 		2F41B9832B33DE2B005EC790 /* VersionText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionText.swift; sourceTree = "<group>"; };
 		2F41B9872B33EF6B005EC790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F4D358A2B3A5E5900729B9C /* MakeSlate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeSlate.swift; sourceTree = "<group>"; };
+		2F4D358D2B3A5FF500729B9C /* RunTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunTests.swift; sourceTree = "<group>"; };
 		2FA8D4652B33B370000EE389 /* leucas */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = leucas; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FA8D4682B33B370000EE389 /* leucas_main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leucas_main.swift; sourceTree = "<group>"; };
 		2FA8D46F2B33B3AB000EE389 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -54,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F4D358C2B3A5FBA00729B9C /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				2F4D358D2B3A5FF500729B9C /* RunTests.swift */,
+			);
+			path = tests;
+			sourceTree = "<group>";
+		};
 		2FA8D45C2B33B370000EE389 = {
 			isa = PBXGroup;
 			children = (
@@ -77,11 +89,13 @@
 		2FA8D4672B33B370000EE389 /* leucas */ = {
 			isa = PBXGroup;
 			children = (
+				2F4D358C2B3A5FBA00729B9C /* tests */,
 				2FA8D4682B33B370000EE389 /* leucas_main.swift */,
 				2FA8D4762B33BD69000EE389 /* ReadScript.swift */,
 				2FA8D47F2B33C8FE000EE389 /* SendMessage.swift */,
 				2FA8D4812B33C943000EE389 /* Script.swift */,
 				2F41B9832B33DE2B005EC790 /* VersionText.swift */,
+				2F4D358A2B3A5E5900729B9C /* MakeSlate.swift */,
 			);
 			path = leucas;
 			sourceTree = "<group>";
@@ -149,6 +163,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		2F41B9882B33F0FE005EC790 /* Increment Build Number */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -173,7 +188,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FA8D4822B33C943000EE389 /* Script.swift in Sources */,
+				2F4D358B2B3A5E5900729B9C /* MakeSlate.swift in Sources */,
 				2F41B9842B33DE2B005EC790 /* VersionText.swift in Sources */,
+				2F4D358E2B3A5FF500729B9C /* RunTests.swift in Sources */,
 				2FA8D4772B33BD69000EE389 /* ReadScript.swift in Sources */,
 				2FA8D4802B33C8FE000EE389 /* SendMessage.swift in Sources */,
 				2FA8D4692B33B370000EE389 /* leucas_main.swift in Sources */,
