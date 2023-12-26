@@ -36,7 +36,8 @@ struct leucas: AsyncParsableCommand {
         let script = readScript(path: file!)
         
         // Slate
-        await sendMessage(apiURL: script.characters[0].api, content: "---", username: "leucas-slate")
+        let slate = makeSlate(file: file!, characters: script.characters)
+        await sendMessage(apiURL: script.characters[0].api, content: slate, username: "leucas-slate")
         
         try await Task.sleep(nanoseconds: UInt64(1e9))
         

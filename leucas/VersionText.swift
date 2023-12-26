@@ -20,5 +20,5 @@ func printVersionText() {
     print("About leucas")
     print("Bundle ID: \(Bundle.main.bundleIdentifier ?? "unavaliable")")
     print("Version: \(Bundle.main.releaseVersionNumber ?? "unavaliable")")
-    print("Build: \(Bundle.main.buildVersionNumber ?? "unavaliable")")
+    print("Build: 0x\(Bundle.main.buildVersionNumber ?? "unavaliable")")
 }
